@@ -1,0 +1,41 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace uuuuuuuuuuuuuuuuuu
+{
+    internal class Program
+    {
+        struct Student
+        {
+            public Students[] students;
+            public class Students
+            {
+                public String Name;
+                public int Age;
+                public double Avg;
+                public void DisplayInfo()
+                {
+                    Console.WriteLine($"Имя - {Name}, возраст - {Age}, ср. балл - {Avg}");
+                }
+                public Students(String name, int age, double avg)
+                {
+                    Name = name;
+                    Age = age;
+                    Avg = avg;
+                }
+            }
+        }
+        static void Main(string[] args)
+        {
+            Student.Students student1 = new Student.Students("Глеб", 5, 4.2);
+            Student.Students student2 = new Student.Students("Антон", 47, 2.5);
+            Student.Students student3 = new Student.Students("Олег", 18, 3.7);
+            student1.DisplayInfo();
+            student2.DisplayInfo();
+            student3.DisplayInfo();
+        }
+    }
+}
